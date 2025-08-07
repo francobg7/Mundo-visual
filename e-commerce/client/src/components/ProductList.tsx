@@ -13,14 +13,12 @@ const products: ProductsType = [
     shortDescription:
       "Llavero promocional de alta calidad con logo personalizable para empresas.",
     description:
-      "Llavero promocional fabricado en acero inoxidable con grabado láser de alta precisión. Incluye clip de seguridad y opción de personalización con logo de empresa. Ideal para eventos corporativos, ferias comerciales y regalos promocionales. Disponible en múltiples colores y acabados.",
+      "Llavero promocional fabricado en acero inoxidable con grabado láser de alta precisión. Incluye clip de seguridad y opción de personalización con logo de empresa. Ideal para eventos corporativos, ferias comerciales y regalos promocionales.",
     price: 12.99,
     sizes: ["estándar"],
-    colors: ["negro", "plateado", "dorado"],
+    colors: ["estándar"],
     images: {
-      negro: "/products/promo-llavero-negro.png",
-      plateado: "/products/promo-llavero-plateado.png",
-      dorado: "/products/promo-llavero-dorado.png",
+      estándar: "/products/promo-llavero-negro.png",
     },
   },
   {
@@ -32,11 +30,9 @@ const products: ProductsType = [
       "Taza térmica de acero inoxidable con capacidad de 350ml, mantiene la temperatura por hasta 6 horas. Incluye tapa hermética y opción de personalización con logo de empresa. Ideal para regalos promocionales, eventos corporativos y ferias comerciales.",
     price: 18.50,
     sizes: ["350ml"],
-    colors: ["negro", "blanco", "azul"],
+    colors: ["estándar"],
     images: {
-      negro: "/products/promo-taza-negro.png",
-      blanco: "/products/promo-taza-blanco.png",
-      azul: "/products/promo-taza-azul.png",
+      estándar: "/products/promo-taza-negro.png",
     },
   },
   // Bolsos
@@ -49,11 +45,9 @@ const products: ProductsType = [
       "Bolso ejecutivo fabricado en cuero genuino de primera calidad con múltiples compartimentos internos organizadores. Incluye compartimento para laptop de hasta 15 pulgadas, bolsillos para documentos, teléfono y accesorios. Correa ajustable y asas reforzadas para máxima durabilidad.",
     price: 89.99,
     sizes: ["m", "l"],
-    colors: ["negro", "marrón", "gris"],
+    colors: ["estándar"],
     images: {
-      negro: "/products/bolso-ejecutivo-negro.png",
-      marrón: "/products/bolso-ejecutivo-marron.png",
-      gris: "/products/bolso-ejecutivo-gris.png",
+      estándar: "/products/bolso-ejecutivo-negro.png",
     },
   },
   {
@@ -65,11 +59,9 @@ const products: ProductsType = [
       "Mochila deportiva fabricada en material resistente al agua con múltiples compartimentos especializados. Incluye bolsillo hidratación, compartimento para laptop, bolsillos laterales para botellas y organizador frontal. Ideal para deportes, viajes y actividades al aire libre.",
     price: 65.00,
     sizes: ["25L", "35L"],
-    colors: ["negro", "azul", "verde"],
+    colors: ["estándar"],
     images: {
-      negro: "/products/mochila-deportiva-negro.png",
-      azul: "/products/mochila-deportiva-azul.png",
-      verde: "/products/mochila-deportiva-verde.png",
+      estándar: "/products/mochila-deportiva-negro.png",
     },
   },
   // Kit de asado
@@ -82,10 +74,9 @@ const products: ProductsType = [
       "Kit completo de asado que incluye pinzas de acero inoxidable, espátula, cepillo para limpieza, termómetro digital, guantes resistentes al calor y estuche organizador. Todos los utensilios están fabricados en acero inoxidable de alta calidad para máxima durabilidad y seguridad.",
     price: 149.99,
     sizes: ["completo"],
-    colors: ["negro", "plateado"],
+    colors: ["estándar"],
     images: {
-      negro: "/products/kit-asado-negro.png",
-      plateado: "/products/kit-asado-plateado.png",
+      estándar: "/products/kit-asado-negro.png",
     },
   },
   {
@@ -97,10 +88,9 @@ const products: ProductsType = [
       "Parrilla portátil de carbón con diseño compacto y plegable. Incluye rejilla de cocción, tapa con ventilación ajustable y patas desplegables. Fabricada en acero galvanizado resistente a la corrosión. Ideal para camping, picnics y viajes al aire libre.",
     price: 79.99,
     sizes: ["portátil"],
-    colors: ["negro", "gris"],
+    colors: ["estándar"],
     images: {
-      negro: "/products/parrilla-portatil-negro.png",
-      gris: "/products/parrilla-portatil-gris.png",
+      estándar: "/products/parrilla-portatil-negro.png",
     },
   },
   // Camping
@@ -113,11 +103,9 @@ const products: ProductsType = [
       "Carpa familiar de 4 personas con estructura de fibra de vidrio y tela resistente al agua. Incluye mosquitero, ventanas con ventilación y suelo impermeable. Montaje rápido en menos de 10 minutos. Ideal para camping familiar y actividades al aire libre.",
     price: 199.99,
     sizes: ["4 personas"],
-    colors: ["verde", "azul", "gris"],
+    colors: ["estándar"],
     images: {
-      verde: "/products/carpa-familiar-verde.png",
-      azul: "/products/carpa-familiar-azul.png",
-      gris: "/products/carpa-familiar-gris.png",
+      estándar: "/products/carpa-familiar-verde.png",
     },
   },
   {
@@ -129,11 +117,9 @@ const products: ProductsType = [
       "Saco de dormir térmico con relleno sintético de alta calidad, diseñado para temperaturas de hasta -5°C. Incluye capucha ajustable, cremallera de doble dirección y material exterior resistente al agua. Compacto y ligero para fácil transporte.",
     price: 85.50,
     sizes: ["universal"],
-    colors: ["azul", "verde", "negro"],
+    colors: ["estándar"],
     images: {
-      azul: "/products/saco-dormir-azul.png",
-      verde: "/products/saco-dormir-verde.png",
-      negro: "/products/saco-dormir-negro.png",
+      estándar: "/products/saco-dormir-azul.png",
     },
   },
   // Termos
@@ -146,11 +132,9 @@ const products: ProductsType = [
       "Termo Stanley clásico fabricado en acero inoxidable de doble pared con capacidad de 1.2L. Mantiene bebidas calientes por 24 horas y frías por 48 horas. Incluye tapa con taza integrada y asa de transporte. Ideal para trabajo, camping y actividades al aire libre.",
     price: 45.99,
     sizes: ["1.2L"],
-    colors: ["negro", "verde", "rojo"],
+    colors: ["estándar"],
     images: {
-      negro: "/products/termo-stanley-negro.png",
-      verde: "/products/termo-stanley-verde.png",
-      rojo: "/products/termo-stanley-rojo.png",
+      estándar: "/products/termo-stanley-negro.png",
     },
   },
   {
@@ -162,11 +146,9 @@ const products: ProductsType = [
       "Termo deportivo de 750ml con diseño ergonómico y pico de flujo rápido. Fabricado en acero inoxidable con aislamiento térmico. Incluye clip de seguridad y tapa con válvula de presión. Ideal para running, ciclismo y actividades deportivas.",
     price: 32.99,
     sizes: ["750ml"],
-    colors: ["negro", "azul", "rojo"],
+    colors: ["estándar"],
     images: {
-      negro: "/products/termo-deportivo-negro.png",
-      azul: "/products/termo-deportivo-azul.png",
-      rojo: "/products/termo-deportivo-rojo.png",
+      estándar: "/products/termo-deportivo-negro.png",
     },
   },
   // Llaveros ejecutivos
@@ -179,11 +161,9 @@ const products: ProductsType = [
       "Llavero ejecutivo fabricado en cuero genuino de primera calidad con clip de acero inoxidable. Incluye anillo giratorio para fácil acceso a las llaves y diseño elegante ideal para uso profesional. Disponible en múltiples colores y acabados.",
     price: 24.99,
     sizes: ["estándar"],
-    colors: ["negro", "marrón", "gris"],
+    colors: ["estándar"],
     images: {
-      negro: "/products/llavero-ejecutivo-negro.png",
-      marrón: "/products/llavero-ejecutivo-marron.png",
-      gris: "/products/llavero-ejecutivo-gris.png",
+      estándar: "/products/llavero-ejecutivo-negro.png",
     },
   },
   {
@@ -195,11 +175,9 @@ const products: ProductsType = [
       "Llavero multifunción con linterna LED integrada de alta luminosidad, abrebotellas y clip de seguridad. Fabricado en aluminio anodizado resistente a golpes y agua. Incluye batería recargable y múltiples modos de iluminación.",
     price: 18.50,
     sizes: ["estándar"],
-    colors: ["negro", "plateado", "azul"],
+    colors: ["estándar"],
     images: {
-      negro: "/products/llavero-multifuncion-negro.png",
-      plateado: "/products/llavero-multifuncion-plateado.png",
-      azul: "/products/llavero-multifuncion-azul.png",
+      estándar: "/products/llavero-multifuncion-negro.png",
     },
   },
   // Artículos navideños
@@ -212,9 +190,9 @@ const products: ProductsType = [
       "Árbol de Navidad artificial de 2 metros de altura con ramas de PVC de alta calidad. Incluye 200 luces LED multicolor integradas, esferas decorativas y estrella tope. Montaje fácil con base estable y almacenamiento compacto.",
     price: 299.99,
     sizes: ["2m"],
-    colors: ["verde"],
+    colors: ["estándar"],
     images: {
-      verde: "/products/arbol-navidad-verde.png",
+      estándar: "/products/arbol-navidad-verde.png",
     },
   },
   {
@@ -226,11 +204,9 @@ const products: ProductsType = [
       "Set completo de decoración navideña que incluye guirnaldas de luces LED, esferas de cristal, figuras de porcelana y coronas de puerta. Todos los elementos están coordinados en tema y colores. Ideal para decorar el hogar durante las fiestas.",
     price: 89.99,
     sizes: ["completo"],
-    colors: ["rojo", "dorado", "plateado"],
+    colors: ["estándar"],
     images: {
-      rojo: "/products/decoracion-navidad-rojo.png",
-      dorado: "/products/decoracion-navidad-dorado.png",
-      plateado: "/products/decoracion-navidad-plateado.png",
+      estándar: "/products/decoracion-navidad-rojo.png",
     },
   },
   // Block de notas
@@ -243,11 +219,9 @@ const products: ProductsType = [
       "Agenda ejecutiva 2024 con cubierta de cuero genuino y páginas de alta calidad. Incluye calendario anual, planificador semanal, sección de contactos y notas. Diseño profesional ideal para uso empresarial y personal.",
     price: 45.99,
     sizes: ["A5"],
-    colors: ["negro", "marrón", "azul"],
+    colors: ["estándar"],
     images: {
-      negro: "/products/agenda-ejecutiva-negro.png",
-      marrón: "/products/agenda-ejecutiva-marron.png",
-      azul: "/products/agenda-ejecutiva-azul.png",
+      estándar: "/products/agenda-ejecutiva-negro.png",
     },
   },
   {
@@ -259,11 +233,9 @@ const products: ProductsType = [
       "Block de notas profesional con hojas removibles de alta calidad y cubierta dura resistente. Incluye separadores organizadores, bolsillo para documentos y clip de seguridad. Ideal para reuniones, conferencias y uso diario en oficina.",
     price: 28.50,
     sizes: ["A4", "A5"],
-    colors: ["negro", "gris", "azul"],
+    colors: ["estándar"],
     images: {
-      negro: "/products/block-notas-negro.png",
-      gris: "/products/block-notas-gris.png",
-      azul: "/products/block-notas-azul.png",
+      estándar: "/products/block-notas-negro.png",
     },
   },
 ];
