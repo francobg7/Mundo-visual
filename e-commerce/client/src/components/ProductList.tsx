@@ -18,7 +18,7 @@ const products: ProductsType = [
     sizes: ["estándar"],
     colors: ["estándar"],
     images: {
-      estándar: "/products/promo-llavero-negro.png",
+      estándar: "/images/llavero2.jpg",
     },
     category: "articulos-promocionales",
   },
@@ -33,7 +33,7 @@ const products: ProductsType = [
     sizes: ["350ml"],
     colors: ["estándar"],
     images: {
-      estándar: "/products/promo-taza-negro.png",
+      estándar: "/images/taza.jpg",
     },
     category: "articulos-promocionales",
   },
@@ -49,7 +49,7 @@ const products: ProductsType = [
     sizes: ["m", "l"],
     colors: ["estándar"],
     images: {
-      estándar: "/products/bolso-ejecutivo-negro.png",
+      estándar: "/images/bolso.jpg",
     },
     category: "bolsos",
   },
@@ -64,7 +64,7 @@ const products: ProductsType = [
     sizes: ["25L", "35L"],
     colors: ["estándar"],
     images: {
-      estándar: "/products/mochila-deportiva-negro.png",
+      estándar: "/images/mochila.jpg",
     },
     category: "bolsos",
   },
@@ -80,7 +80,7 @@ const products: ProductsType = [
     sizes: ["completo"],
     colors: ["estándar"],
     images: {
-      estándar: "/products/kit-asado-negro.png",
+      estándar: "/images/kit-asado.jpg",
     },
     category: "kit-de-asado",
   },
@@ -95,7 +95,7 @@ const products: ProductsType = [
     sizes: ["portátil"],
     colors: ["estándar"],
     images: {
-      estándar: "/products/parrilla-portatil-negro.png",
+      estándar: "/images/parrilla.jpg",
     },
     category: "kit-de-asado",
   },
@@ -111,7 +111,7 @@ const products: ProductsType = [
     sizes: ["4 personas"],
     colors: ["estándar"],
     images: {
-      estándar: "/products/carpa-familiar-verde.png",
+      estándar: "/images/carpa.jpg",
     },
     category: "camping",
   },
@@ -126,7 +126,7 @@ const products: ProductsType = [
     sizes: ["estándar"],
     colors: ["estándar"],
     images: {
-      estándar: "/products/saco-dormir-azul.png",
+      estándar: "/images/bolsa-de-dormir.jpg",
     },
     category: "camping",
   },
@@ -142,7 +142,7 @@ const products: ProductsType = [
     sizes: ["1L"],
     colors: ["estándar"],
     images: {
-      estándar: "/products/termo-acero-negro.png",
+      estándar: "/images/termo-acero.jpg",
     },
     category: "termos",
   },
@@ -157,7 +157,7 @@ const products: ProductsType = [
     sizes: ["500ml"],
     colors: ["estándar"],
     images: {
-      estándar: "/products/termo-deportivo-negro.png",
+      estándar: "/images/termo-deportivo.jpg",
     },
     category: "termos",
   },
@@ -173,7 +173,7 @@ const products: ProductsType = [
     sizes: ["estándar"],
     colors: ["estándar"],
     images: {
-      estándar: "/products/llavero-ejecutivo-negro.png",
+      estándar: "/images/llavero1.jpg",
     },
     category: "llaveros-ejecutivos",
   },
@@ -188,7 +188,7 @@ const products: ProductsType = [
     sizes: ["estándar"],
     colors: ["estándar"],
     images: {
-      estándar: "/products/llavero-multifuncion-negro.png",
+      estándar: "/images/llavero-led.jpg",
     },
     category: "llaveros-ejecutivos",
   },
@@ -204,7 +204,7 @@ const products: ProductsType = [
     sizes: ["2m"],
     colors: ["estándar"],
     images: {
-      estándar: "/products/arbol-navidad-verde.png",
+      estándar: "/images/arbol.jpg",
     },
     category: "articulos-navidenos",
   },
@@ -219,7 +219,7 @@ const products: ProductsType = [
     sizes: ["completo"],
     colors: ["estándar"],
     images: {
-      estándar: "/products/decoracion-navidad-rojo.png",
+      estándar: "/images/decoracion-navidenha.jpg",
     },
     category: "articulos-navidenos",
   },
@@ -235,7 +235,7 @@ const products: ProductsType = [
     sizes: ["A5"],
     colors: ["estándar"],
     images: {
-      estándar: "/products/agenda-ejecutiva-negro.png",
+      estándar: "/images/agenda.jpg",
     },
     category: "block-de-notas",
   },
@@ -250,7 +250,7 @@ const products: ProductsType = [
     sizes: ["A4", "A5"],
     colors: ["estándar"],
     images: {
-      estándar: "/products/block-notas-negro.png",
+      estándar: "/images/blog-notas.jpg",
     },
     category: "block-de-notas",
   },
