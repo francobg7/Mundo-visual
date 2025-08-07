@@ -12,7 +12,7 @@ const popularProducts = [
       "Llavero promocional fabricado en acero inoxidable con grabado láser de alta precisión. Incluye clip de seguridad y opción de personalización con logo de empresa.",
     price: 12.99,
     sizes: ["estándar"],
-    colors: ["negro", "plateado", "dorado"],
+    colors: ["estándar"],
     images: {
       negro: "/products/promo-llavero-negro.png",
       plateado: "/products/promo-llavero-plateado.png",
@@ -28,7 +28,7 @@ const popularProducts = [
       "Bolso ejecutivo fabricado en cuero genuino de primera calidad con múltiples compartimentos internos organizadores.",
     price: 89.99,
     sizes: ["m", "l"],
-    colors: ["negro", "marrón", "gris"],
+    colors: ["estándar"],
     images: {
       negro: "/products/bolso-ejecutivo-negro.png",
       marrón: "/products/bolso-ejecutivo-marron.png",
@@ -44,7 +44,7 @@ const popularProducts = [
       "Kit completo de asado que incluye pinzas de acero inoxidable, espátula, cepillo para limpieza, termómetro digital y guantes resistentes al calor.",
     price: 149.99,
     sizes: ["completo"],
-    colors: ["negro", "plateado"],
+    colors: ["estándar"],
     images: {
       negro: "/products/kit-asado-negro.png",
       plateado: "/products/kit-asado-plateado.png",
@@ -59,7 +59,7 @@ const popularProducts = [
       "Termo Stanley clásico fabricado en acero inoxidable de doble pared con capacidad de 1.2L. Mantiene bebidas calientes por 24 horas y frías por 48 horas.",
     price: 45.99,
     sizes: ["1.2L"],
-    colors: ["negro", "verde", "rojo"],
+    colors: ["estándar"],
     images: {
       negro: "/products/termo-stanley-negro.png",
       verde: "/products/termo-stanley-verde.png",
@@ -75,7 +75,7 @@ const popularProducts = [
       "Árbol de Navidad artificial de 2 metros de altura con ramas de PVC de alta calidad. Incluye 200 luces LED multicolor integradas y esferas decorativas.",
     price: 299.99,
     sizes: ["2m"],
-    colors: ["verde"],
+    colors: ["estándar"],
     images: {
       verde: "/products/arbol-navidad-verde.png",
     },
