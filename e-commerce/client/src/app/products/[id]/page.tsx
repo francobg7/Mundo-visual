@@ -9,14 +9,12 @@ const product: ProductType = {
   shortDescription:
     "Llavero promocional de alta calidad con logo personalizable para empresas.",
   description:
-    "Llavero promocional fabricado en acero inoxidable con grabado láser de alta precisión. Incluye clip de seguridad y opción de personalización con logo de empresa. Ideal para eventos corporativos, ferias comerciales y regalos promocionales. Disponible en múltiples colores y acabados. El producto incluye garantía de calidad y servicio de personalización incluido.",
+    "Llavero promocional fabricado en acero inoxidable con grabado láser de alta precisión. Incluye clip de seguridad y opción de personalización con logo de empresa. Ideal para eventos corporativos, ferias comerciales y regalos promocionales. El producto incluye garantía de calidad y servicio de personalización incluido.",
   price: 12.99,
   sizes: ["estándar"],
-  colors: ["negro", "plateado", "dorado"],
+  colors: ["estándar"],
   images: {
-    negro: "/products/promo-llavero-negro.png",
-    plateado: "/products/promo-llavero-plateado.png",
-    dorado: "/products/promo-llavero-dorado.png",
+    estándar: "/products/promo-llavero-negro.png",
   },
 };
 
@@ -38,18 +36,18 @@ const ProductPage = async ({
   searchParams,
 }: {
   params: Promise<{ id: string }>;
-  searchParams: Promise<{ color: string; size: string }>;
+  searchParams: Promise<{ size: string }>;
 }) => {
-  const { size, color } = await searchParams;
+  const { size } = await searchParams;
 
   const selectedSize = size || (product.sizes[0] as string);
-  const selectedColor = color || (product.colors[0] as string);
+  const selectedColor = "estándar"; // Color por defecto
   return (
     <div className="flex flex-col gap-4 lg:flex-row md:gap-12 mt-12">
       {/* IMAGE */}
       <div className="w-full lg:w-5/12 relative aspect-[2/3]">
         <Image
-          src={product.images[selectedColor]}
+          src={Object.values(product.images)[0]}
           alt={product.name}
           fill
           className="object-contain rounded-md"
