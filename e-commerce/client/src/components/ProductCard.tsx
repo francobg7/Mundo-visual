@@ -11,7 +11,6 @@ import { toast } from "react-toastify";
 const ProductCard = ({ product }: { product: ProductType }) => {
   const [productTypes, setProductTypes] = useState({
     size: product.sizes[0],
-    color: product.colors[0],
     quantity: 10, // Cantidad mínima para mayoristas
   });
 
@@ -21,7 +20,7 @@ const ProductCard = ({ product }: { product: ProductType }) => {
     type,
     value,
   }: {
-    type: "size" | "color" | "quantity";
+    type: "size" | "quantity";
     value: string | number;
   }) => {
     setProductTypes((prev) => ({
@@ -35,7 +34,7 @@ const ProductCard = ({ product }: { product: ProductType }) => {
       ...product,
       quantity: productTypes.quantity,
       selectedSize: productTypes.size,
-      selectedColor: productTypes.color,
+      selectedColor: "estándar", // Color por defecto
     });
     toast.success(`${productTypes.quantity} unidades agregadas a la cotización`)
   };
@@ -46,7 +45,7 @@ const ProductCard = ({ product }: { product: ProductType }) => {
       <Link href={`/products/${product.id}`}>
         <div className="relative aspect-[2/3]">
           <Image
-            src={product.images[productTypes.color]}
+            src={Object.values(product.images)[0]}
             alt={product.name}
             fill
             className="object-cover hover:scale-105 transition-all duration-300"
@@ -76,30 +75,6 @@ const ProductCard = ({ product }: { product: ProductType }) => {
                 </option>
               ))}
             </select>
-          </div>
-          {/* COLORS */}
-          <div className="flex flex-col gap-1">
-            <span className="text-gray-500">Color</span>
-            <div className="flex items-center gap-2">
-              {product.colors.map((color) => (
-                <div
-                  className={`cursor-pointer border-1 ${
-                    productTypes.color === color
-                      ? "border-gray-400"
-                      : "border-gray-200"
-                  } rounded-full p-[1.2px]`}
-                  key={color}
-                  onClick={() =>
-                    handleProductType({ type: "color", value: color })
-                  }
-                >
-                  <div
-                    className="w-[14px] h-[14px] rounded-full"
-                    style={{ backgroundColor: color }}
-                  />
-                </div>
-              ))}
-            </div>
           </div>
           {/* QUANTITY */}
           <div className="flex flex-col gap-1">
