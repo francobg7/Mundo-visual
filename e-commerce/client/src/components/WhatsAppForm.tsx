@@ -11,7 +11,7 @@ const generateWhatsAppMessage = (cart: CartItemsType) => {
   let message = "Hola, soy mayorista y estoy interesado en solicitar cotización para los siguientes productos:\n\n";
   
   cart.forEach((item, index) => {
-    message += `${index + 1}- ${item.name} de color ${item.selectedColor}`;
+    message += `${index + 1}- ${item.name}`;
     if (item.selectedSize && item.selectedSize !== "estándar" && item.selectedSize !== "completo" && item.selectedSize !== "universal") {
       message += `, tamaño ${item.selectedSize}`;
     }
