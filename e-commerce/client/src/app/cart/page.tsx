@@ -148,9 +148,6 @@ const CartPage = () => {
                       <p className="text-xs text-gray-500">
                         Tamaño: {item.selectedSize}
                       </p>
-                      <p className="text-xs text-gray-500">
-                        Color: {item.selectedColor}
-                      </p>
                     </div>
                     <p className="font-medium">${item.price.toFixed(2)}</p>
                   </div>
