@@ -12,6 +12,7 @@ const ProductCard = ({ product }: { product: ProductType }) => {
   const [productTypes, setProductTypes] = useState({
     size: product.sizes[0],
     color: product.colors[0],
+    quantity: 10, // Cantidad mínima para mayoristas
   });
 
   const { addToCart } = useCartStore();
@@ -20,8 +21,8 @@ const ProductCard = ({ product }: { product: ProductType }) => {
     type,
     value,
   }: {
-    type: "size" | "color";
-    value: string;
+    type: "size" | "color" | "quantity";
+    value: string | number;
   }) => {
     setProductTypes((prev) => ({
       ...prev,
@@ -32,11 +33,11 @@ const ProductCard = ({ product }: { product: ProductType }) => {
   const handleAddToCart = () => {
     addToCart({
       ...product,
-      quantity: 1,
+      quantity: productTypes.quantity,
       selectedSize: productTypes.size,
       selectedColor: productTypes.color,
     });
-    toast.success("Producto agregado al carrito")
+    toast.success(`${productTypes.quantity} unidades agregadas a la cotización`)
   };
 
   return (
@@ -100,16 +101,40 @@ const ProductCard = ({ product }: { product: ProductType }) => {
               ))}
             </div>
           </div>
+          {/* QUANTITY */}
+          <div className="flex flex-col gap-1">
+            <span className="text-gray-500">Cantidad</span>
+            <select
+              name="quantity"
+              id="quantity"
+              className="ring ring-gray-300 rounded-md px-2 py-1"
+              onChange={(e) =>
+                handleProductType({ type: "quantity", value: parseInt(e.target.value) })
+              }
+              value={productTypes.quantity}
+            >
+              <option value={10}>10 unidades</option>
+              <option value={25}>25 unidades</option>
+              <option value={50}>50 unidades</option>
+              <option value={100}>100 unidades</option>
+              <option value={250}>250 unidades</option>
+              <option value={500}>500 unidades</option>
+              <option value={1000}>1000 unidades</option>
+            </select>
+          </div>
         </div>
         {/* PRICE AND ADD TO CART BUTTON */}
         <div className="flex items-center justify-between">
-          <p className="font-medium">${product.price.toFixed(2)}</p>
+          <div className="flex flex-col">
+            <p className="font-medium">${product.price.toFixed(2)}</p>
+            <p className="text-xs text-gray-500">Precio por unidad</p>
+          </div>
           <button
             onClick={handleAddToCart}
             className="ring-1 ring-gray-200 shadow-lg rounded-md px-2 py-1 text-sm cursor-pointer hover:text-white hover:bg-black transition-all duration-300 flex items-center gap-2"
           >
             <ShoppingCart className="w-4 h-4" />
-            Agregar al carrito
+            Solicitar cotización
           </button>
         </div>
       </div>

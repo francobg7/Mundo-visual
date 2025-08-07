@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Mundo Visual - Los Mejores Productos",
-  description: "Mundo Visual es el mejor lugar para encontrar los mejores productos promocionales y de regalo",
+  title: "Mundo Visual - Mayoristas",
+  description: "Mundo Visual - Distribuidor mayorista de productos promocionales y de regalo. Cotizaciones para mayoristas",
 };
 
 export default function RootLayout({
