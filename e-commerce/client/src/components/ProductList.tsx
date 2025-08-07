@@ -20,6 +20,7 @@ const products: ProductsType = [
     images: {
       estándar: "/products/promo-llavero-negro.png",
     },
+    category: "articulos-promocionales",
   },
   {
     id: 2,
@@ -34,6 +35,7 @@ const products: ProductsType = [
     images: {
       estándar: "/products/promo-taza-negro.png",
     },
+    category: "articulos-promocionales",
   },
   // Bolsos
   {
@@ -49,6 +51,7 @@ const products: ProductsType = [
     images: {
       estándar: "/products/bolso-ejecutivo-negro.png",
     },
+    category: "bolsos",
   },
   {
     id: 4,
@@ -63,6 +66,7 @@ const products: ProductsType = [
     images: {
       estándar: "/products/mochila-deportiva-negro.png",
     },
+    category: "bolsos",
   },
   // Kit de asado
   {
@@ -78,6 +82,7 @@ const products: ProductsType = [
     images: {
       estándar: "/products/kit-asado-negro.png",
     },
+    category: "kit-de-asado",
   },
   {
     id: 6,
@@ -92,79 +97,85 @@ const products: ProductsType = [
     images: {
       estándar: "/products/parrilla-portatil-negro.png",
     },
+    category: "kit-de-asado",
   },
   // Camping
   {
     id: 7,
     name: "Carpa Familiar 4 Personas",
     shortDescription:
-      "Carpa familiar resistente al agua con capacidad para 4 personas y fácil montaje.",
+      "Carpa familiar resistente al agua para 4 personas, perfecta para camping y aventuras al aire libre.",
     description:
-      "Carpa familiar de 4 personas con estructura de fibra de vidrio y tela resistente al agua. Incluye mosquitero, ventanas con ventilación y suelo impermeable. Montaje rápido en menos de 10 minutos. Ideal para camping familiar y actividades al aire libre.",
+      "Carpa familiar de 4 personas fabricada en material resistente al agua con sistema de ventilación mejorado. Incluye mosquitero, bolsa de transporte y kit de reparación. Montaje fácil con varillas de fibra de vidrio y base impermeable.",
     price: 199.99,
     sizes: ["4 personas"],
     colors: ["estándar"],
     images: {
       estándar: "/products/carpa-familiar-verde.png",
     },
+    category: "camping",
   },
   {
     id: 8,
     name: "Saco de Dormir Térmico",
     shortDescription:
-      "Saco de dormir térmico para temperaturas de hasta -5°C, perfecto para camping invernal.",
+      "Saco de dormir térmico de alta calidad para temperaturas de hasta -10°C.",
     description:
-      "Saco de dormir térmico con relleno sintético de alta calidad, diseñado para temperaturas de hasta -5°C. Incluye capucha ajustable, cremallera de doble dirección y material exterior resistente al agua. Compacto y ligero para fácil transporte.",
-    price: 85.50,
-    sizes: ["universal"],
+      "Saco de dormir térmico con relleno sintético de alta calidad, diseñado para temperaturas de hasta -10°C. Incluye capucha ajustable, cremallera de doble sentido y bolsa de compresión. Ideal para camping en climas fríos.",
+    price: 89.99,
+    sizes: ["estándar"],
     colors: ["estándar"],
     images: {
       estándar: "/products/saco-dormir-azul.png",
     },
+    category: "camping",
   },
   // Termos
   {
     id: 9,
-    name: "Termo Stanley Clásico",
+    name: "Termo de Acero Inoxidable 1L",
     shortDescription:
-      "Termo Stanley de acero inoxidable con capacidad de 1.2L, mantiene temperatura por 24 horas.",
+      "Termo de acero inoxidable de 1 litro que mantiene la temperatura por hasta 24 horas.",
     description:
-      "Termo Stanley clásico fabricado en acero inoxidable de doble pared con capacidad de 1.2L. Mantiene bebidas calientes por 24 horas y frías por 48 horas. Incluye tapa con taza integrada y asa de transporte. Ideal para trabajo, camping y actividades al aire libre.",
+      "Termo de acero inoxidable de 1 litro con doble pared de vacío que mantiene bebidas calientes por hasta 24 horas y frías por hasta 48 horas. Incluye tapa hermética, asa plegable y diseño ergonómico. Ideal para viajes, trabajo y actividades al aire libre.",
     price: 45.99,
-    sizes: ["1.2L"],
+    sizes: ["1L"],
     colors: ["estándar"],
     images: {
-      estándar: "/products/termo-stanley-negro.png",
+      estándar: "/products/termo-acero-negro.png",
     },
+    category: "termos",
   },
   {
     id: 10,
-    name: "Termo Deportivo 750ml",
+    name: "Termo Deportivo 500ml",
     shortDescription:
-      "Termo deportivo ligero con pico de flujo rápido, perfecto para actividades deportivas.",
+      "Termo deportivo compacto de 500ml perfecto para actividades físicas y viajes.",
     description:
-      "Termo deportivo de 750ml con diseño ergonómico y pico de flujo rápido. Fabricado en acero inoxidable con aislamiento térmico. Incluye clip de seguridad y tapa con válvula de presión. Ideal para running, ciclismo y actividades deportivas.",
-    price: 32.99,
-    sizes: ["750ml"],
+      "Termo deportivo compacto de 500ml con diseño ergonómico y tapa de fácil apertura. Mantiene la temperatura por hasta 12 horas. Incluye clip de seguridad y asa de transporte. Ideal para deportes, gimnasio y viajes cortos.",
+    price: 32.50,
+    sizes: ["500ml"],
     colors: ["estándar"],
     images: {
       estándar: "/products/termo-deportivo-negro.png",
     },
+    category: "termos",
   },
   // Llaveros ejecutivos
   {
     id: 11,
     name: "Llavero Ejecutivo de Cuero",
     shortDescription:
-      "Llavero ejecutivo de cuero genuino con clip de acero inoxidable y diseño elegante.",
+      "Llavero ejecutivo de cuero genuino con diseño profesional y múltiples funciones.",
     description:
-      "Llavero ejecutivo fabricado en cuero genuino de primera calidad con clip de acero inoxidable. Incluye anillo giratorio para fácil acceso a las llaves y diseño elegante ideal para uso profesional. Disponible en múltiples colores y acabados.",
-    price: 24.99,
+      "Llavero ejecutivo fabricado en cuero genuino con diseño profesional. Incluye clip de seguridad, abrebotellas integrado y espacio para tarjetas de identificación. Ideal para uso empresarial y regalos corporativos.",
+    price: 25.99,
     sizes: ["estándar"],
     colors: ["estándar"],
     images: {
       estándar: "/products/llavero-ejecutivo-negro.png",
     },
+    category: "llaveros-ejecutivos",
   },
   {
     id: 12,
@@ -179,6 +190,7 @@ const products: ProductsType = [
     images: {
       estándar: "/products/llavero-multifuncion-negro.png",
     },
+    category: "llaveros-ejecutivos",
   },
   // Artículos navideños
   {
@@ -194,6 +206,7 @@ const products: ProductsType = [
     images: {
       estándar: "/products/arbol-navidad-verde.png",
     },
+    category: "articulos-navidenos",
   },
   {
     id: 14,
@@ -208,6 +221,7 @@ const products: ProductsType = [
     images: {
       estándar: "/products/decoracion-navidad-rojo.png",
     },
+    category: "articulos-navidenos",
   },
   // Block de notas
   {
@@ -223,6 +237,7 @@ const products: ProductsType = [
     images: {
       estándar: "/products/agenda-ejecutiva-negro.png",
     },
+    category: "block-de-notas",
   },
   {
     id: 16,
@@ -237,19 +252,53 @@ const products: ProductsType = [
     images: {
       estándar: "/products/block-notas-negro.png",
     },
+    category: "block-de-notas",
   },
 ];
 
 const ProductList = ({ category,params }: { category: string, params:"homepage" | "products" }) => {
+  // Filtrar productos por categoría si se proporciona una categoría
+  const filteredProducts = category 
+    ? products.filter(product => product.category === category)
+    : products;
+
+  // Obtener el nombre de la categoría para mostrar en el mensaje
+  const getCategoryName = (categorySlug: string) => {
+    const categoryMap: Record<string, string> = {
+      "articulos-promocionales": "Artículos promocionales",
+      "bolsos": "Bolsos",
+      "kit-de-asado": "Kit de asado",
+      "camping": "Camping",
+      "termos": "Termos",
+      "llaveros-ejecutivos": "Llaveros ejecutivos",
+      "articulos-navidenos": "Artículos navideños",
+      "block-de-notas": "Block de notas"
+    };
+    return categoryMap[categorySlug] || categorySlug;
+  };
+
   return (
     <div className="w-full">
       <Categories />
       {params === "products" && <Filter/>}
-      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-12">
-        {products.map((product) => (
-          <ProductCard key={product.id} product={product} />
-        ))}
-      </div>
+      
+      {category && filteredProducts.length === 0 ? (
+        <div className="text-center py-12">
+          <h3 className="text-lg font-semibold text-gray-600 mb-2">
+            No se encontraron productos en la categoría "{getCategoryName(category)}"
+          </h3>
+          <p className="text-gray-500">
+            Prueba seleccionando otra categoría o ver todos los productos.
+          </p>
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-12">
+          {filteredProducts.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+        </div>
+      )}
+      
       <Link
         href={category ? `/products/?category=${category}` : "/products"}
         className="flex justify-end mt-4 underline text-sm text-gray-500"
