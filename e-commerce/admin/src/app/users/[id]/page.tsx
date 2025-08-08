@@ -27,11 +27,11 @@ const SingleUserPage = () => {
       <Breadcrumb>
         <BreadcrumbList>
           <BreadcrumbItem>
-            <BreadcrumbLink href="/">Dashboard</BreadcrumbLink>
+            <BreadcrumbLink href="/">Panel</BreadcrumbLink>
           </BreadcrumbItem>
           <BreadcrumbSeparator />
           <BreadcrumbItem>
-            <BreadcrumbLink href="/users">Users</BreadcrumbLink>
+            <BreadcrumbLink href="/users">Usuarios</BreadcrumbLink>
           </BreadcrumbItem>
           <BreadcrumbSeparator />
           <BreadcrumbItem>
@@ -45,7 +45,7 @@ const SingleUserPage = () => {
         <div className="w-full xl:w-1/3 space-y-6">
           {/* USER BADGES CONTAINER */}
           <div className="bg-primary-foreground p-4 rounded-lg">
-            <h1 className="text-xl font-semibold">User Badges</h1>
+            <h1 className="text-xl font-semibold">Insignias del usuario</h1>
             <div className="flex gap-4 mt-4">
               <HoverCard>
                 <HoverCardTrigger>
@@ -55,9 +55,9 @@ const SingleUserPage = () => {
                   />
                 </HoverCardTrigger>
                 <HoverCardContent>
-                  <h1 className="font-bold mb-2">Verified User</h1>
+                  <h1 className="font-bold mb-2">Usuario verificado</h1>
                   <p className="text-sm text-muted-foreground">
-                    This user has been verified by the admin.
+                    Este usuario ha sido verificado por el administrador.
                   </p>
                 </HoverCardContent>
               </HoverCard>
@@ -71,8 +71,7 @@ const SingleUserPage = () => {
                 <HoverCardContent>
                   <h1 className="font-bold mb-2">Admin</h1>
                   <p className="text-sm text-muted-foreground">
-                    Admin users have access to all features and can manage
-                    users.
+                    Los usuarios administradores tienen acceso a todas las funciones y pueden gestionar usuarios.
                   </p>
                 </HoverCardContent>
               </HoverCard>
@@ -84,9 +83,9 @@ const SingleUserPage = () => {
                   />
                 </HoverCardTrigger>
                 <HoverCardContent>
-                  <h1 className="font-bold mb-2">Awarded</h1>
+                  <h1 className="font-bold mb-2">Premiado</h1>
                   <p className="text-sm text-muted-foreground">
-                    This user has been awarded for their contributions.
+                    Este usuario ha sido premiado por sus contribuciones.
                   </p>
                 </HoverCardContent>
               </HoverCard>
@@ -100,7 +99,7 @@ const SingleUserPage = () => {
                 <HoverCardContent>
                   <h1 className="font-bold mb-2">Popular</h1>
                   <p className="text-sm text-muted-foreground">
-                    This user has been popular in the community.
+                    Este usuario ha sido popular en la comunidad.
                   </p>
                 </HoverCardContent>
               </HoverCard>
@@ -125,10 +124,10 @@ const SingleUserPage = () => {
           {/* INFORMATION CONTAINER */}
           <div className="bg-primary-foreground p-4 rounded-lg">
             <div className="flex items-center justify-between">
-              <h1 className="text-xl font-semibold">User Information</h1>
+              <h1 className="text-xl font-semibold">Información del usuario</h1>
               <Sheet>
                 <SheetTrigger asChild>
-                  <Button>Edit User</Button>
+                  <Button>Editar usuario</Button>
                 </SheetTrigger>
                 <EditUser />
               </Sheet>
@@ -136,33 +135,33 @@ const SingleUserPage = () => {
             <div className="space-y-4 mt-4">
               <div className="flex flex-col gap-2 mb-8">
                 <p className="text-sm text-muted-foreground">
-                  Profile completion
+                  Completado del perfil
                 </p>
                 <Progress value={66} />
               </div>
               <div className="flex items-center gap-2">
-                <span className="font-bold">Full name:</span>
+                <span className="font-bold">Nombre completo:</span>
                 <span>John Doe</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="font-bold">Email:</span>
+                <span className="font-bold">Correo:</span>
                 <span>john.doe@gmail.com</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="font-bold">Phone:</span>
+                <span className="font-bold">Teléfono:</span>
                 <span>+1 234 5678</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="font-bold">Address:</span>
+                <span className="font-bold">Dirección:</span>
                 <span>123 Main St</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="font-bold">City:</span>
+                <span className="font-bold">Ciudad:</span>
                 <span>New York</span>
               </div>
             </div>
             <p className="text-sm text-muted-foreground mt-4">
-              Joined on 2025.01.01
+              Se unió el 2025.01.01
             </p>
           </div>
         </div>
@@ -171,7 +170,7 @@ const SingleUserPage = () => {
           
           {/* CHART CONTAINER */}
           <div className="bg-primary-foreground p-4 rounded-lg">
-            <h1 className="text-xl font-semibold">User Activity</h1>
+            <h1 className="text-xl font-semibold">Actividad del usuario</h1>
             <AppLineChart />
           </div>
         </div>
