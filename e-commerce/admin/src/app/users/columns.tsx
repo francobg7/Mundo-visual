@@ -62,7 +62,7 @@ export const columns: ColumnDef<User>[] = [
   },
   {
     accessorKey: "fullName",
-    header: "User",
+    header: "Usuario",
   },
   {
     accessorKey: "email",
@@ -72,7 +72,7 @@ export const columns: ColumnDef<User>[] = [
           variant="ghost"
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
         >
-          Email
+          Correo
           <ArrowUpDown className="ml-2 h-4 w-4" />
         </Button>
       );
@@ -80,9 +80,10 @@ export const columns: ColumnDef<User>[] = [
   },
   {
     accessorKey: "status",
-    header: "Status",
+    header: "Estado",
     cell: ({ row }) => {
-      const status = row.getValue("status");
+      const status = row.getValue("status") as string;
+      const label = status === "active" ? "activo" : "inactivo";
 
       return (
         <div
@@ -92,7 +93,7 @@ export const columns: ColumnDef<User>[] = [
             status === "inactive" && "bg-red-500/40"
           )}
         >
-          {status as string}
+          {label}
         </div>
       );
     },
@@ -106,20 +107,20 @@ export const columns: ColumnDef<User>[] = [
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="ghost" className="h-8 w-8 p-0">
-              <span className="sr-only">Open menu</span>
+              <span className="sr-only">Abrir menú</span>
               <MoreHorizontal className="h-4 w-4" />
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">
-            <DropdownMenuLabel>Actions</DropdownMenuLabel>
+            <DropdownMenuLabel>Acciones</DropdownMenuLabel>
             <DropdownMenuItem
               onClick={() => navigator.clipboard.writeText(user.id)}
             >
-              Copy user ID
+              Copiar ID de usuario
             </DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem>
-              <Link href={`/users/${user.id}`}>View customer</Link>
+              <Link href={`/users/${user.id}`}>Ver usuario</Link>
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>

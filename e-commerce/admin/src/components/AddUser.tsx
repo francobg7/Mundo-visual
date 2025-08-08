@@ -31,12 +31,12 @@ import { Button } from "./ui/button";
 const formSchema = z.object({
   fullName: z
     .string()
-    .min(2, { message: "Full name must be at least 2 characters!" })
+    .min(2, { message: "El nombre debe tener al menos 2 caracteres" })
     .max(50),
-  email: z.string().email({ message: "Invalid email address!" }),
-  phone: z.string().min(10).max(15),
-  address: z.string().min(2),
-  city: z.string().min(2),
+  email: z.string().email({ message: "Correo electrónico inválido" }),
+  phone: z.string().min(10, { message: "Teléfono inválido" }).max(15),
+  address: z.string().min(2, { message: "Dirección inválida" }),
+  city: z.string().min(2, { message: "Ciudad inválida" }),
 });
 
 const AddUser = () => {
@@ -46,7 +46,7 @@ const AddUser = () => {
   return (
     <SheetContent>
       <SheetHeader>
-        <SheetTitle className="mb-4">Add User</SheetTitle>
+        <SheetTitle className="mb-4">Agregar usuario</SheetTitle>
         <SheetDescription asChild>
           <Form {...form}>
             <form className="space-y-8">
@@ -55,12 +55,12 @@ const AddUser = () => {
                 name="fullName"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Full Name</FormLabel>
+                    <FormLabel>Nombre completo</FormLabel>
                     <FormControl>
                       <Input {...field} />
                     </FormControl>
                     <FormDescription>
-                      Enter user full name.
+                      Ingresa el nombre completo del usuario.
                     </FormDescription>
                     <FormMessage />
                   </FormItem>
@@ -71,12 +71,12 @@ const AddUser = () => {
                 name="email"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Email</FormLabel>
+                    <FormLabel>Correo electrónico</FormLabel>
                     <FormControl>
                       <Input {...field} />
                     </FormControl>
                     <FormDescription>
-                      Only admin can see your email.
+                      Solo el administrador puede ver tu correo.
                     </FormDescription>
                     <FormMessage />
                   </FormItem>
@@ -87,12 +87,12 @@ const AddUser = () => {
                 name="phone"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Phone</FormLabel>
+                    <FormLabel>Teléfono</FormLabel>
                     <FormControl>
                       <Input {...field} />
                     </FormControl>
                     <FormDescription>
-                      Only admin can see your phone number (optional)
+                      Solo el administrador puede ver tu teléfono (opcional)
                     </FormDescription>
                     <FormMessage />
                   </FormItem>
@@ -103,12 +103,12 @@ const AddUser = () => {
                 name="address"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Address</FormLabel>
+                    <FormLabel>Dirección</FormLabel>
                     <FormControl>
                       <Input {...field} />
                     </FormControl>
                     <FormDescription>
-                      Enter user address (optional)
+                      Ingresa la dirección del usuario (opcional)
                     </FormDescription>
                     <FormMessage />
                   </FormItem>
@@ -119,18 +119,18 @@ const AddUser = () => {
                 name="city"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>City</FormLabel>
+                    <FormLabel>Ciudad</FormLabel>
                     <FormControl>
                       <Input {...field} />
                     </FormControl>
                     <FormDescription>
-                      Enter user city (optional)
+                      Ingresa la ciudad del usuario (opcional)
                     </FormDescription>
                     <FormMessage />
                   </FormItem>
                 )}
               />
-              <Button type="submit">Submit</Button>
+              <Button type="submit">Guardar</Button>
             </form>
           </Form>
         </SheetDescription>

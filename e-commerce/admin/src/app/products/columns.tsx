@@ -48,7 +48,7 @@ export const columns: ColumnDef<Product>[] = [
   },
   {
     accessorKey: "image",
-    header: "Image",
+    header: "Imagen",
     cell: ({ row }) => {
       const product = row.original;
       return (
@@ -65,7 +65,7 @@ export const columns: ColumnDef<Product>[] = [
   },
   {
     accessorKey: "name",
-    header: "Name",
+    header: "Nombre",
   },
   {
     accessorKey: "price",
@@ -75,7 +75,7 @@ export const columns: ColumnDef<Product>[] = [
           variant="ghost"
           onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
         >
-          Price
+          Precio
           <ArrowUpDown className="ml-2 h-4 w-4" />
         </Button>
       );
@@ -83,7 +83,7 @@ export const columns: ColumnDef<Product>[] = [
   },
   {
     accessorKey: "shortDescription",
-    header: "Description",
+    header: "Descripción",
   },
   {
     id: "actions",
@@ -94,20 +94,20 @@ export const columns: ColumnDef<Product>[] = [
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="ghost" className="h-8 w-8 p-0">
-              <span className="sr-only">Open menu</span>
+              <span className="sr-only">Abrir menú</span>
               <MoreHorizontal className="h-4 w-4" />
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">
-            <DropdownMenuLabel>Actions</DropdownMenuLabel>
+            <DropdownMenuLabel>Acciones</DropdownMenuLabel>
             <DropdownMenuItem
               onClick={() => navigator.clipboard.writeText(product.id.toString())}
             >
-              Copy product ID
+              Copiar ID de producto
             </DropdownMenuItem>
             <DropdownMenuSeparator />
             <DropdownMenuItem>
-              <Link href={`/products/${product.id}`}>View customer</Link>
+              <Link href={`/products/${product.id}`}>Ver producto</Link>
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
