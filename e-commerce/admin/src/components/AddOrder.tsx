@@ -29,8 +29,8 @@ import {
 import { Button } from "./ui/button";
 
 const formSchema = z.object({
-  amount: z.number().min(1, { message: "Amount must be at least 1!" }),
-  userId: z.string().min(1, { message: "User Id is required!" }),
+  amount: z.number().min(1, { message: "El monto debe ser al menos 1" }),
+  userId: z.string().min(1, { message: "El ID de usuario es requerido" }),
   status: z.enum(["pending", "processing", "success", "failed"]),
 });
 
@@ -41,7 +41,7 @@ const AddOrder = () => {
   return (
     <SheetContent>
       <SheetHeader>
-        <SheetTitle className="mb-4">Add Order</SheetTitle>
+        <SheetTitle className="mb-4">Agregar pedido</SheetTitle>
         <SheetDescription asChild>
           <Form {...form}>
             <form className="space-y-8">
@@ -50,12 +50,12 @@ const AddOrder = () => {
                 name="amount"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Amount</FormLabel>
+                    <FormLabel>Monto</FormLabel>
                     <FormControl>
                       <Input {...field} />
                     </FormControl>
                     <FormDescription>
-                      Enter the amount of the order.
+                      Ingresa el monto del pedido.
                     </FormDescription>
                     <FormMessage />
                   </FormItem>
@@ -66,11 +66,11 @@ const AddOrder = () => {
                 name="userId"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>User ID</FormLabel>
+                    <FormLabel>ID de usuario</FormLabel>
                     <FormControl>
                       <Input {...field} />
                     </FormControl>
-                    <FormDescription>Enter the User ID.</FormDescription>
+                    <FormDescription>Ingresa el ID del usuario.</FormDescription>
                     <FormMessage />
                   </FormItem>
                 )}
@@ -80,28 +80,28 @@ const AddOrder = () => {
                 name="status"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Status</FormLabel>
+                    <FormLabel>Estado</FormLabel>
                     <FormControl>
                       <Select>
                         <SelectTrigger>
-                          <SelectValue placeholder="Select a status" />
+                          <SelectValue placeholder="Selecciona un estado" />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="pending">Pending</SelectItem>
-                          <SelectItem value="processing">Processing</SelectItem>
-                          <SelectItem value="success">Success</SelectItem>
-                          <SelectItem value="failed">Failed</SelectItem>
+                          <SelectItem value="pending">Pendiente</SelectItem>
+                          <SelectItem value="processing">Procesando</SelectItem>
+                          <SelectItem value="success">Exitoso</SelectItem>
+                          <SelectItem value="failed">Fallido</SelectItem>
                         </SelectContent>
                       </Select>
                     </FormControl>
                     <FormDescription>
-                      Enter the status of the order.
+                      Ingresa el estado del pedido.
                     </FormDescription>
                     <FormMessage />
                   </FormItem>
                 )}
               />
-              <Button type="submit">Submit</Button>
+              <Button type="submit">Guardar</Button>
             </form>
           </Form>
         </SheetDescription>
