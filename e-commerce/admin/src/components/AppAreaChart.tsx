@@ -17,28 +17,28 @@ import {
 
 const chartConfig = {
   desktop: {
-    label: "Desktop",
+    label: "Escritorio",
     color: "var(--chart-2)",
   },
   mobile: {
-    label: "Mobile",
+    label: "Móvil",
     color: "var(--chart-1)",
   },
 } satisfies ChartConfig;
 
 const chartData = [
-  { month: "January", desktop: 186, mobile: 80 },
-  { month: "February", desktop: 305, mobile: 200 },
-  { month: "March", desktop: 237, mobile: 120 },
-  { month: "April", desktop: 73, mobile: 190 },
-  { month: "May", desktop: 209, mobile: 130 },
-  { month: "June", desktop: 214, mobile: 140 },
+  { month: "Enero", desktop: 186, mobile: 80 },
+  { month: "Febrero", desktop: 305, mobile: 200 },
+  { month: "Marzo", desktop: 237, mobile: 120 },
+  { month: "Abril", desktop: 73, mobile: 190 },
+  { month: "Mayo", desktop: 209, mobile: 130 },
+  { month: "Junio", desktop: 214, mobile: 140 },
 ];
 
 const AppAreaChart = () => {
   return (
     <div className="">
-      <h1 className="text-lg font-medium mb-6">Total Visitors</h1>
+      <h1 className="text-lg font-medium mb-6">Visitantes totales</h1>
       <ChartContainer config={chartConfig} className="min-h-[200px] w-full">
         <AreaChart accessibilityLayer data={chartData}>
           <CartesianGrid vertical={false} />
