@@ -85,7 +85,7 @@ const popularProducts = [
 const latestTransactions = [
   {
     id: 1,
-    title: "Order Payment",
+    title: "Pago de pedido",
     badge: "John Doe",
     image:
       "https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=800",
@@ -93,7 +93,7 @@ const latestTransactions = [
   },
   {
     id: 2,
-    title: "Order Payment",
+    title: "Pago de pedido",
     badge: "Jane Smith",
     image:
       "https://images.pexels.com/photos/4969918/pexels-photo-4969918.jpeg?auto=compress&cs=tinysrgb&w=800",
@@ -101,7 +101,7 @@ const latestTransactions = [
   },
   {
     id: 3,
-    title: "Order Payment",
+    title: "Pago de pedido",
     badge: "Michael Johnson",
     image:
       "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=800",
@@ -109,7 +109,7 @@ const latestTransactions = [
   },
   {
     id: 4,
-    title: "Order Payment",
+    title: "Pago de pedido",
     badge: "Lily Adams",
     image:
       "https://images.pexels.com/photos/712513/pexels-photo-712513.jpeg?auto=compress&cs=tinysrgb&w=800",
@@ -117,7 +117,7 @@ const latestTransactions = [
   },
   {
     id: 5,
-    title: "Order Payment",
+    title: "Pago de pedido",
     badge: "Sam Brown",
     image:
       "https://images.pexels.com/photos/1680175/pexels-photo-1680175.jpeg?auto=compress&cs=tinysrgb&w=800",
@@ -130,7 +130,7 @@ const CardList = ({ title }: { title: string }) => {
     <div className="">
       <h1 className="text-lg font-medium mb-6">{title}</h1>
       <div className="flex flex-col gap-2">
-        {title === "Popular Products"
+        {title === "Productos populares"
           ? popularProducts.map((item) => (
               <Card
                 key={item.id}
