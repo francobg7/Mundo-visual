@@ -81,13 +81,13 @@ const sizes = [
 ] as const;
 
 const formSchema = z.object({
-  name: z.string().min(1, { message: "Product name is required!" }),
+  name: z.string().min(1, { message: "El nombre del producto es requerido" }),
   shortDescription: z
     .string()
-    .min(1, { message: "Short description is required!" })
+    .min(1, { message: "La descripción corta es requerida" })
     .max(60),
-  description: z.string().min(1, { message: "Description is required!" }),
-  price: z.number().min(1, { message: "Price is required!" }),
+  description: z.string().min(1, { message: "La descripción es requerida" }),
+  price: z.number().min(1, { message: "El precio es requerido" }),
   category: z.enum(categories),
   sizes: z.array(z.enum(sizes)),
   colors: z.array(z.enum(colors)),
@@ -202,7 +202,7 @@ const AddProduct = () => {
                   name="sizes"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Sizes</FormLabel>
+                      <FormLabel>Talles</FormLabel>
                       <FormControl>
                         <div className="grid grid-cols-3 gap-4 my-2">
                           {sizes.map((size) => (
@@ -229,7 +229,7 @@ const AddProduct = () => {
                         </div>
                       </FormControl>
                       <FormDescription>
-                        Select the available sizes for the product.
+                        Selecciona los talles disponibles para el producto.
                       </FormDescription>
                       <FormMessage />
                     </FormItem>
@@ -240,7 +240,7 @@ const AddProduct = () => {
                   name="colors"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Colors</FormLabel>
+                      <FormLabel>Colores</FormLabel>
                       <FormControl>
                         <div className="space-y-4">
                           <div className="grid grid-cols-3 gap-4 my-2">
@@ -278,7 +278,7 @@ const AddProduct = () => {
                           </div>
                           {field.value && field.value.length > 0 && (
                             <div className="mt-8 space-y-4">
-                              <p className="text-sm font-medium">Upload images for selected colors:</p>
+                              <p className="text-sm font-medium">Sube imágenes para los colores seleccionados:</p>
                               {field.value.map((color) => (
                                 <div className="flex items-center gap-2" key={color}>
                                   <div
@@ -294,13 +294,13 @@ const AddProduct = () => {
                         </div>
                       </FormControl>
                       <FormDescription>
-                        Select the available colors for the product.
+                        Selecciona los colores disponibles para el producto.
                       </FormDescription>
                       <FormMessage />
                     </FormItem>
                   )}
                 />
-                <Button type="submit">Submit</Button>
+                <Button type="submit">Guardar</Button>
               </form>
             </Form>
           </SheetDescription>
