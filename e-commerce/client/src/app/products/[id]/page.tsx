@@ -16,13 +16,10 @@ const product: ProductType = {
   images: {
     estándar: "/products/promo-llavero-negro.png",
   },
+  category: "llaveros-ejecutivos",
 };
 
-export const generateMetadata = async ({
-  params,
-}: {
-  params: { id: string };
-}) => {
+export const generateMetadata = async () => {
   // TODO:get the product from db
   // TEMPORARY
   return {
@@ -32,10 +29,8 @@ export const generateMetadata = async ({
 };
 
 const ProductPage = async ({
-  params,
   searchParams,
 }: {
-  params: Promise<{ id: string }>;
   searchParams: Promise<{ size: string }>;
 }) => {
   const { size } = await searchParams;

@@ -285,7 +285,7 @@ const ProductList = ({ category,params }: { category: string, params:"homepage" 
       {category && filteredProducts.length === 0 ? (
         <div className="text-center py-12">
           <h3 className="text-lg font-semibold text-gray-600 mb-2">
-            No se encontraron productos en la categoría "{getCategoryName(category)}"
+            No se encontraron productos en la categoría &quot;{getCategoryName(category)}&quot;
           </h3>
           <p className="text-gray-500">
             Prueba seleccionando otra categoría o ver todos los productos.

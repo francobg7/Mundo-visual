@@ -1,12 +1,10 @@
 "use client";
 
 import useCartStore from "@/stores/cartStore";
-import { CartItemsType } from "@/types";
 import { ArrowRight, Trash2, MessageCircle } from "lucide-react";
 import WhatsAppForm from "@/components/WhatsAppForm";
 import Image from "next/image";
 import { useRouter, useSearchParams } from "next/navigation";
-import { useState } from "react";
 
 const steps = [
   {
