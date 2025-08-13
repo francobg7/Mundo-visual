@@ -5,6 +5,7 @@ import { ArrowRight, Trash2, MessageCircle } from "lucide-react";
 import WhatsAppForm from "@/components/WhatsAppForm";
 import Image from "next/image";
 import { useRouter, useSearchParams } from "next/navigation";
+import { Suspense } from "react";
 
 const steps = [
   {
@@ -76,10 +77,9 @@ const steps = [
 
 
 
-const CartPage = () => {
+const CartContent = () => {
   const searchParams = useSearchParams();
   const router = useRouter();
-
 
   const activeStep = parseInt(searchParams.get("step") || "1");
 
@@ -215,6 +215,14 @@ const CartPage = () => {
         </div>
       </div>
     </div>
+  );
+};
+
+const CartPage = () => {
+  return (
+    <Suspense fallback={<div className="flex items-center justify-center mt-12">Cargando...</div>}>
+      <CartContent />
+    </Suspense>
   );
 };
 

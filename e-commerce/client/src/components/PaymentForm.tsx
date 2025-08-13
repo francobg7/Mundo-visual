@@ -13,7 +13,7 @@ const PaymentForm = () => {
     resolver: zodResolver(paymentFormSchema),
   });
 
-  const handlePaymentForm: SubmitHandler<PaymentFormInputs> = (data) => {
+  const handlePaymentForm: SubmitHandler<PaymentFormInputs> = () => {
     
   };
 
