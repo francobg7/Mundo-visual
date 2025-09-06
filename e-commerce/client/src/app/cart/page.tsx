@@ -14,7 +14,7 @@ const steps = [
   },
   {
     id: 2,
-    title: "Solicitar Cotización",
+    title: "Finalizar Compra",
   },
 ];
 
@@ -87,7 +87,7 @@ const CartContent = () => {
   return (
     <div className="flex flex-col gap-8 items-center justify-center mt-12">
       {/* TITLE */}
-      <h1 className="text-2xl font-medium">Cotización Mayorista</h1>
+      <h1 className="text-2xl font-medium">Carrito de Compras</h1>
       {/* STEPS */}
       <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
         {steps.map((step) => (
@@ -169,10 +169,10 @@ const CartContent = () => {
         </div>
         {/* DETAILS */}
         <div className="w-full lg:w-5/12 shadow-lg border-1 border-gray-100 p-8 rounded-lg flex flex-col gap-8 h-max">
-          <h2 className="font-semibold">Resumen de Cotización</h2>
+          <h2 className="font-semibold">Resumen de Compra</h2>
           <div className="flex flex-col gap-4">
             <div className="flex justify-between text-sm">
-              <p className="text-gray-500">Valor estimado</p>
+              <p className="text-gray-500">Subtotal</p>
               <p className="font-medium">
                 $
                 {cart
@@ -182,7 +182,7 @@ const CartContent = () => {
             </div>
             <hr className="border-gray-200" />
             <div className="flex justify-between">
-              <p className="text-gray-800 font-semibold">Total estimado</p>
+              <p className="text-gray-800 font-semibold">Total</p>
               <p className="font-medium">
                 $
                 {cart
@@ -194,10 +194,10 @@ const CartContent = () => {
           {activeStep === 1 && cart.length > 0 && (
             <button
               onClick={() => router.push("/cart?step=2", { scroll: false })}
-              className="w-full bg-green-500 hover:bg-green-600 transition-all duration-300 text-white p-3 rounded-lg cursor-pointer flex items-center justify-center gap-2"
+              className="w-full bg-black hover:bg-gray-800 transition-all duration-300 text-white p-3 rounded-lg cursor-pointer flex items-center justify-center gap-2"
             >
               <MessageCircle className="w-4 h-4" />
-              Solicitar Cotización
+              Proceder al Pago
               <ArrowRight className="w-3 h-3" />
             </button>
           )}
@@ -206,9 +206,9 @@ const CartContent = () => {
               <p>No hay productos seleccionados</p>
               <button
                 onClick={() => router.push("/")}
-                className="mt-2 text-green-500 hover:text-green-600 underline"
+                className="mt-2 text-black hover:text-gray-600 underline"
               >
-                Ver catálogo mayorista
+                Ver catálogo
               </button>
             </div>
           )}

@@ -11,7 +11,7 @@ import { toast } from "react-toastify";
 const ProductCard = ({ product }: { product: ProductType }) => {
   const [productTypes, setProductTypes] = useState({
     size: product.sizes[0],
-    quantity: 10, // Cantidad mínima para mayoristas
+    quantity: 1, // Cantidad individual
   });
 
   const { addToCart } = useCartStore();
@@ -36,11 +36,11 @@ const ProductCard = ({ product }: { product: ProductType }) => {
       selectedSize: productTypes.size,
       selectedColor: "estándar", // Color por defecto
     });
-    toast.success(`${productTypes.quantity} unidades agregadas a la cotización`)
+    toast.success(`${productTypes.quantity} ${productTypes.quantity === 1 ? 'producto agregado' : 'productos agregados'} al carrito`)
   };
 
   return (
-    <div className="shadow-lg rounded-lg overflow-hidden">
+    <div className="border border-gray-200 hover:border-black transition-all duration-300 rounded-lg overflow-hidden bg-white">
       {/* IMAGE */}
       <Link href={`/products/${product.id}`}>
         <div className="relative aspect-[2/3]">
@@ -88,28 +88,26 @@ const ProductCard = ({ product }: { product: ProductType }) => {
               }
               value={productTypes.quantity}
             >
-              <option value={10}>10 unidades</option>
-              <option value={25}>25 unidades</option>
-              <option value={50}>50 unidades</option>
-              <option value={100}>100 unidades</option>
-              <option value={250}>250 unidades</option>
-              <option value={500}>500 unidades</option>
-              <option value={1000}>1000 unidades</option>
+              <option value={1}>1</option>
+              <option value={2}>2</option>
+              <option value={3}>3</option>
+              <option value={4}>4</option>
+              <option value={5}>5</option>
+              <option value={10}>10</option>
             </select>
           </div>
         </div>
         {/* PRICE AND ADD TO CART BUTTON */}
         <div className="flex items-center justify-between">
           <div className="flex flex-col">
-            <p className="font-medium">${product.price.toFixed(2)}</p>
-            <p className="text-xs text-gray-500">Precio por unidad</p>
+            <p className="font-bold text-lg">${product.price.toFixed(2)}</p>
           </div>
           <button
             onClick={handleAddToCart}
-            className="ring-1 ring-gray-200 shadow-lg rounded-md px-2 py-1 text-sm cursor-pointer hover:text-white hover:bg-black transition-all duration-300 flex items-center gap-2"
+            className="bg-black text-white hover:bg-gray-800 transition-all duration-300 rounded-md px-4 py-2 text-sm font-medium cursor-pointer flex items-center gap-2"
           >
             <ShoppingCart className="w-4 h-4" />
-            Solicitar cotización
+            Agregar al carrito
           </button>
         </div>
       </div>

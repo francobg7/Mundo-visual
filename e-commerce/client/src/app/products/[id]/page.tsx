@@ -5,18 +5,20 @@ import Image from "next/image";
 // Producto de ejemplo actualizado
 const product: ProductType = {
   id: 1,
-  name: "Llavero Personalizado Empresarial",
+  name: "Nike Air Jordan 1 Retro High Chicago",
   shortDescription:
-    "Llavero promocional de alta calidad con logo personalizable para empresas.",
+    "Icónicas sneakers Jordan 1 en colorway Chicago, perfectas para streetwear.",
   description:
-    "Llavero promocional fabricado en acero inoxidable con grabado láser de alta precisión. Incluye clip de seguridad y opción de personalización con logo de empresa. Ideal para eventos corporativos, ferias comerciales y regalos promocionales. El producto incluye garantía de calidad y servicio de personalización incluido.",
-  price: 12.99,
-  sizes: ["estándar"],
-  colors: ["estándar"],
+    "Las legendarias Air Jordan 1 Retro High en el clásico colorway Chicago. Fabricadas con cuero premium y suela de goma duradera. Un ícono del streetwear que combina estilo y comodidad. Perfectas para cualquier outfit urbano. Estas sneakers han definido la cultura del basketball y el streetwear por décadas.",
+  price: 189.99,
+  sizes: ["7", "8", "9", "10", "11", "12"],
+  colors: ["chicago", "bred", "royal"],
   images: {
-    estándar: "/products/promo-llavero-negro.png",
+    chicago: "/images/jordan1-chicago.jpg",
+    bred: "/images/jordan1-bred.jpg", 
+    royal: "/images/jordan1-royal.jpg",
   },
-  category: "llaveros-ejecutivos",
+  category: "sneakers",
 };
 
 export const generateMetadata = async () => {
