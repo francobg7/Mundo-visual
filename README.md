@@ -1,6 +1,6 @@
 # - E-commerce Platform
 
-**Mundo Visual** is a modern e-commerce platform focused on wholesale product sales. It includes a client-facing storefront and a powerful admin dashboard.
+**** is a modern e-commerce platform focused on wholesale product sales. It includes a client-facing storefront and a powerful admin dashboard.
 
 ## 🧾 Overview
 
