@@ -43,7 +43,7 @@ const ProductCard = ({ product }: { product: ProductType }) => {
     <div className="border border-gray-200 hover:border-black transition-all duration-300 rounded-lg overflow-hidden bg-white">
       {/* IMAGE */}
       <Link href={`/products/${product.id}`}>
-        <div className="relative aspect-[2/3]">
+        <div className="relative aspect-[4/3]">
           <Image
             src={Object.values(product.images)[0]}
             alt={product.name}
