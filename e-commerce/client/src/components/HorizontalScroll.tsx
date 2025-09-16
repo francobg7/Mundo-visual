@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import Image from "next/image";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import "./HorizontalScroll.css";
@@ -36,7 +37,7 @@ const HorizontalScroll = () => {
             start: "top top",
             end: () => `+=${horizontalScrollLength}`,
             invalidateOnRefresh: true,
-            onUpdate: (self) => {
+            onUpdate: () => {
               // Opcional: agregar efectos adicionales durante el scroll
             }
           },
@@ -84,18 +85,30 @@ const HorizontalScroll = () => {
               Explora nuestra colección streetwear con un scroll horizontal innovador
             </h2>
           </div>
-          <img
-            src="https://images.pexels.com/photos/5207262/pexels-photo-5207262.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
-            alt="Streetwear Collection 1"
-          />
-          <img
-            src="https://images.pexels.com/photos/3371358/pexels-photo-3371358.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
-            alt="Streetwear Collection 2"
-          />
-          <img
-            src="https://images.pexels.com/photos/3618545/pexels-photo-3618545.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
-            alt="Streetwear Collection 3"
-          />
+          <div className="relative w-[60vw] h-[70vh]">
+            <Image
+              src="https://images.pexels.com/photos/5207262/pexels-photo-5207262.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
+              alt="Streetwear Collection 1"
+              fill
+              className="object-cover rounded-lg"
+            />
+          </div>
+          <div className="relative w-[60vw] h-[70vh]">
+            <Image
+              src="https://images.pexels.com/photos/3371358/pexels-photo-3371358.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
+              alt="Streetwear Collection 2"
+              fill
+              className="object-cover rounded-lg"
+            />
+          </div>
+          <div className="relative w-[60vw] h-[70vh]">
+            <Image
+              src="https://images.pexels.com/photos/3618545/pexels-photo-3618545.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
+              alt="Streetwear Collection 3"
+              fill
+              className="object-cover rounded-lg"
+            />
+          </div>
           <div>
             <h2>
               SLY SHOP - Tu destino para el mejor streetwear urbano

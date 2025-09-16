@@ -98,11 +98,9 @@
   justify-content: center;
 }
 
-.horizontal-scroll-container .pin-wrap img {
-  height: 70vh;
-  width: auto;
-  object-fit: cover;
+.horizontal-scroll-container .pin-wrap .relative {
   border-radius: 10px;
+  overflow: hidden;
 }
 
 .horizontal-scroll-container p {
