@@ -87,15 +87,15 @@ const HorizontalScroll = () => {
           </div>
           <div className="relative w-[60vw] h-[70vh]">
             <Image
-              src="https://images.pexels.com/photos/5207262/pexels-photo-5207262.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
-              alt="Streetwear Collection 1"
+              src="/pics/golden-goose2.jpg"
+              alt="Golden Goose Sneakers"
               fill
               className="object-cover rounded-lg"
             />
           </div>
           <div className="relative w-[60vw] h-[70vh]">
             <Image
-              src="https://images.pexels.com/photos/3371358/pexels-photo-3371358.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
+              src="/pics/valentino.jpg"
               alt="Streetwear Collection 2"
               fill
               className="object-cover rounded-lg"
@@ -103,7 +103,7 @@ const HorizontalScroll = () => {
           </div>
           <div className="relative w-[60vw] h-[70vh]">
             <Image
-              src="https://images.pexels.com/photos/3618545/pexels-photo-3618545.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=900"
+              src="/pics/nike3.jpg"
               alt="Streetwear Collection 3"
               fill
               className="object-cover rounded-lg"
