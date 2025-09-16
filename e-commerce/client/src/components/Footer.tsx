@@ -7,12 +7,12 @@ const Footer = () => {
       <div className="mx-auto max-w-6xl flex flex-col items-center gap-12 md:flex-row md:items-start md:justify-between md:gap-0">
         <div className="flex flex-col gap-6 items-center md:items-start">
           <Link href="/" className="flex items-center">
-            <Image src="/logo.png" alt="slyg shopp" width={36} height={36} />
+            <Image src="/logo.png" alt="SLY SHOP" width={36} height={36} />
             <p className="hidden md:block text-md font-medium tracking-wider text-white">
-              SLYG SHOPP.
+              SLY SHOP.
             </p>
           </Link>
-          <p className="text-sm text-gray-400">© 2025 slyg shopp.</p>
+          <p className="text-sm text-gray-400">© 2025 SLY SHOP.</p>
           <p className="text-sm text-gray-400">Todos los derechos reservados.</p>
         </div>
         <div className="flex flex-col gap-6 text-sm text-gray-400 items-center md:items-start">
