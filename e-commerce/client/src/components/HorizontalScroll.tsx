@@ -95,7 +95,7 @@ const HorizontalScroll = () => {
           </div>
           <div className="relative w-[60vw] h-[70vh]">
             <Image
-              src="/pics/valentino.jpg"
+              src=""
               alt="Streetwear Collection 2"
               fill
               className="object-cover rounded-lg"
