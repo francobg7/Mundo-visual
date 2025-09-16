@@ -32,17 +32,17 @@ const Navbar = () => {
         {/* CENTER - Logo */}
         <div className="absolute left-1/2 transform -translate-x-1/2">
           <Link href="/" className="flex items-center gap-2 text-white hover:opacity-80 transition-opacity duration-200">
-            <Image
-              src="/logo-slyg.png"
+        <Image
+          src="/logo-slyg.png"
               alt="SLY SHOP"
               width={32}
               height={32}
               className="w-8 h-8"
-            />
+        />
             <h1 className="text-xl md:text-2xl font-extrabold tracking-wider">
               SLY SHOP
             </h1>
-          </Link>
+      </Link>
         </div>
 
         {/* RIGHT SIDE - Cart */}
@@ -54,9 +54,9 @@ const Navbar = () => {
                 {totalItems}
               </span>
             )}
-          </Link>
-        </div>
-      </nav>
+        </Link>
+      </div>
+    </nav>
 
       {/* Sidebar Menu */}
       <SidebarMenu 
