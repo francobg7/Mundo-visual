@@ -7,7 +7,7 @@ import ShoppingCartIcon from "./ShoppingCartIcon";
 const Navbar = () => {
   return (
     <nav className="w-full bg-black border-b border-gray-700">
-      <div className="mx-auto p-4 sm:px-0 sm:max-w-xl md:max-w-2xl lg:max-w-3xl xl:max-w-6xl flex items-center justify-between">
+      <div className="mx-auto p-4 sm:px-6 lg:px-8 max-w-screen-2xl flex items-center justify-between">
         {/* LEFT */}
         <Link href="/" className="flex items-center -ml-2">
           <Image
