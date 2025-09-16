@@ -11,13 +11,13 @@ const Navbar = () => {
       <Link href="/" className="flex items-center">
         <Image
           src="/logo-slyg.png"
-          alt="SLYG SHOPP"
+          alt="SLY SHOP"
           width={36}
           height={36}
           className="w-6 h-6 md:w-9 md:h-9"
         />
         <p className="hidden md:block text-md font-medium tracking-wider text-white">
-          SLYG SHOPP
+          SLY SHOP
         </p>
       </Link>
       {/* RIGHT */}
