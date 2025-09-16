@@ -60,60 +60,60 @@ const ProductCard = ({ product, isHomepage = false }: { product: ProductType; is
         {/* Mostrar información completa solo si NO es homepage */}
         {!isHomepage && (
           <>
-            {/* PRODUCT TYPES */}
-            <div className="flex items-center gap-4 text-xs">
-              {/* SIZES */}
-              <div className="flex flex-col gap-1">
-                <span className="text-gray-500">Tamaño</span>
-                <select
-                  name="size"
-                  id="size"
-                  className="ring ring-gray-300 rounded-md px-2 py-1"
-                  onChange={(e) =>
-                    handleProductType({ type: "size", value: e.target.value })
-                  }
-                >
-                  {product.sizes.map((size) => (
-                    <option key={size} value={size}>
-                      {size.toUpperCase()}
-                    </option>
-                  ))}
-                </select>
-              </div>
-              {/* QUANTITY */}
-              <div className="flex flex-col gap-1">
-                <span className="text-gray-500">Cantidad</span>
-                <select
-                  name="quantity"
-                  id="quantity"
-                  className="ring ring-gray-300 rounded-md px-2 py-1"
-                  onChange={(e) =>
-                    handleProductType({ type: "quantity", value: parseInt(e.target.value) })
-                  }
-                  value={productTypes.quantity}
-                >
-                  <option value={1}>1</option>
-                  <option value={2}>2</option>
-                  <option value={3}>3</option>
-                  <option value={4}>4</option>
-                  <option value={5}>5</option>
-                  <option value={10}>10</option>
-                </select>
-              </div>
-            </div>
-            {/* PRICE AND ADD TO CART BUTTON */}
-            <div className="flex items-center justify-between">
-              <div className="flex flex-col">
-                <p className="font-bold text-lg">${product.price.toFixed(2)}</p>
-              </div>
-              <button
-                onClick={handleAddToCart}
-                className="bg-black text-white hover:bg-gray-800 transition-all duration-300 rounded-md px-4 py-2 text-sm font-medium cursor-pointer flex items-center gap-2"
-              >
-                <ShoppingCart className="w-4 h-4" />
-                Agregar al carrito
-              </button>
-            </div>
+        {/* PRODUCT TYPES */}
+        <div className="flex items-center gap-4 text-xs">
+          {/* SIZES */}
+          <div className="flex flex-col gap-1">
+            <span className="text-gray-500">Tamaño</span>
+            <select
+              name="size"
+              id="size"
+              className="ring ring-gray-300 rounded-md px-2 py-1"
+              onChange={(e) =>
+                handleProductType({ type: "size", value: e.target.value })
+              }
+            >
+              {product.sizes.map((size) => (
+                <option key={size} value={size}>
+                  {size.toUpperCase()}
+                </option>
+              ))}
+            </select>
+          </div>
+          {/* QUANTITY */}
+          <div className="flex flex-col gap-1">
+            <span className="text-gray-500">Cantidad</span>
+            <select
+              name="quantity"
+              id="quantity"
+              className="ring ring-gray-300 rounded-md px-2 py-1"
+              onChange={(e) =>
+                handleProductType({ type: "quantity", value: parseInt(e.target.value) })
+              }
+              value={productTypes.quantity}
+            >
+              <option value={1}>1</option>
+              <option value={2}>2</option>
+              <option value={3}>3</option>
+              <option value={4}>4</option>
+              <option value={5}>5</option>
+              <option value={10}>10</option>
+            </select>
+          </div>
+        </div>
+        {/* PRICE AND ADD TO CART BUTTON */}
+        <div className="flex items-center justify-between">
+          <div className="flex flex-col">
+            <p className="font-bold text-lg">${product.price.toFixed(2)}</p>
+          </div>
+          <button
+            onClick={handleAddToCart}
+            className="bg-black text-white hover:bg-gray-800 transition-all duration-300 rounded-md px-4 py-2 text-sm font-medium cursor-pointer flex items-center gap-2"
+          >
+            <ShoppingCart className="w-4 h-4" />
+            Agregar al carrito
+          </button>
+        </div>
           </>
         )}
       </div>
