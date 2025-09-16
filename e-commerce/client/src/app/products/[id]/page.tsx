@@ -41,7 +41,7 @@ const ProductPage = async ({
   const selectedColor = "estándar"; // Color por defecto
   return (
     <div className="mx-auto p-4 sm:px-6 lg:px-8 max-w-screen-xl">
-      <div className="flex flex-col gap-4 lg:flex-row md:gap-12 mt-12">
+    <div className="flex flex-col gap-4 lg:flex-row md:gap-12 mt-12">
       {/* IMAGE */}
       <div className="w-full lg:w-5/12 relative aspect-[4/3]">
         <Image
@@ -94,7 +94,7 @@ const ProductPage = async ({
           <span className="underline hover:text-black">Reembolso</span>.
         </p>
       </div>
-    </div>
+      </div>
     </div>
   );
 };
