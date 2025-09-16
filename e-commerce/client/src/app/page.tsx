@@ -12,7 +12,7 @@ const Homepage = async ({
     <div className="">
       <HeroSection />
       <HorizontalScroll />
-      <div className="mx-auto p-4 sm:px-0 sm:max-w-xl md:max-w-2xl lg:max-w-3xl xl:max-w-6xl mt-16">
+      <div className="mx-auto p-4 sm:px-6 lg:px-8 max-w-screen-2xl mt-16">
         <ProductList category={category} params="homepage"/>
       </div>
     </div>
