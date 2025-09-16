@@ -9,7 +9,7 @@ const Navbar = () => {
     <nav className="w-full bg-black border-b border-gray-700">
       <div className="mx-auto p-4 sm:px-0 sm:max-w-xl md:max-w-2xl lg:max-w-3xl xl:max-w-6xl flex items-center justify-between">
         {/* LEFT */}
-        <Link href="/" className="flex items-center">
+        <Link href="/" className="flex items-center -ml-2">
           <Image
             src="/logo-slyg.png"
             alt="SLY SHOP"
