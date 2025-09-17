@@ -84,6 +84,7 @@
   align-items: center;
   padding: 50px 5vw;
   width: max-content;
+  will-change: transform;
 }
 
 .horizontal-scroll-container .pin-wrap > * {
