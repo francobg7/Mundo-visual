@@ -17,62 +17,59 @@ const HorizontalScroll = () => {
 
     const pinWrap = pinWrapRef.current;
     
-    // Esperar a que las imágenes se carguen para calcular el ancho correcto
-    const images = pinWrap.querySelectorAll('img');
-    let loadedImages = 0;
-    
     const setupAnimation = () => {
-      const pinWrapWidth = pinWrap.scrollWidth;
-      const horizontalScrollLength = pinWrapWidth - window.innerWidth;
+      // Forzar un recalculo del layout
+      pinWrap.style.width = 'max-content';
+      
+      // Pequeño delay para asegurar que las imágenes estén renderizadas
+      setTimeout(() => {
+        const pinWrapWidth = pinWrap.scrollWidth;
+        const horizontalScrollLength = pinWrapWidth - window.innerWidth;
 
-      if (horizontalScrollLength > 0) {
-        // Animación horizontal con GSAP ScrollTrigger
-        const scrollTween = gsap.to(pinWrap, {
-          x: -horizontalScrollLength,
-          ease: "none",
-          scrollTrigger: {
-            trigger: "#sectionPin",
-            pin: true,
-            scrub: 1,
-            start: "top top",
-            end: () => `+=${horizontalScrollLength}`,
-            invalidateOnRefresh: true,
-            onUpdate: () => {
-              // Opcional: agregar efectos adicionales durante el scroll
-            }
-          },
-        });
-
-        return scrollTween;
-      }
+        if (horizontalScrollLength > 0) {
+          // Limpiar animaciones previas
+          ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+          
+          // Animación horizontal con GSAP ScrollTrigger
+          gsap.to(pinWrap, {
+            x: -horizontalScrollLength,
+            ease: "none",
+            scrollTrigger: {
+              trigger: "#sectionPin",
+              pin: true,
+              scrub: 1,
+              start: "top top",
+              end: () => `+=${horizontalScrollLength}`,
+              invalidateOnRefresh: true,
+              onRefresh: () => {
+                // Recalcular en cada refresh
+                const newPinWrapWidth = pinWrap.scrollWidth;
+                const newHorizontalScrollLength = newPinWrapWidth - window.innerWidth;
+                return newHorizontalScrollLength;
+              }
+            },
+          });
+        }
+        
+        ScrollTrigger.refresh();
+      }, 100);
     };
 
-    // Si hay imágenes, esperar a que se carguen
-    if (images.length > 0) {
-      images.forEach((img) => {
-        if (img.complete) {
-          loadedImages++;
-        } else {
-          img.onload = () => {
-            loadedImages++;
-            if (loadedImages === images.length) {
-              setupAnimation();
-            }
-          };
-        }
-      });
-      
-      if (loadedImages === images.length) {
-        setupAnimation();
-      }
-    } else {
+    // Configurar la animación
+    setupAnimation();
+
+    // Escuchar cambios de tamaño de ventana
+    const handleResize = () => {
+      ScrollTrigger.refresh();
       setupAnimation();
-    }
+    };
+
+    window.addEventListener('resize', handleResize);
 
     // Cleanup
     return () => {
+      window.removeEventListener('resize', handleResize);
       ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-      ScrollTrigger.refresh();
     };
   }, []);
 
@@ -95,7 +92,7 @@ const HorizontalScroll = () => {
           </div>
           <div className="relative w-[60vw] h-[70vh]">
             <Image
-              src=""
+              src="/pics/valentino.jpg"
               alt="Streetwear Collection 2"
               fill
               className="object-cover rounded-lg"
