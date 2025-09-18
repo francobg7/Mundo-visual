@@ -7,10 +7,10 @@ import HorizontalScroll from "@/components/HorizontalScroll";
 const sampleProducts = [
   {
     id: 1,
-    name: "Nike Air Jordan 1",
+    name: "Golden Goose",
     price: 189.99,
-    image: "/images/jordan1-chicago.jpg",
-    shortDescription: "Icónicas sneakers Jordan 1 en colorway Chicago"
+    image: "/golden/golden1.JPG",
+    shortDescription: "Icónicas sneakers Super-Star Negro Blanco Cuero"
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ const sampleProducts = [
     id: 3,
     name: "Supreme Box Logo Hoodie",
     price: 450.00,
-    image: "/images/supreme-hoodie.jpg",
+    image: "/images/3D/hoodie.jpg",
     shortDescription: "Hoodie Supreme con logo icónico"
   }
 ];
