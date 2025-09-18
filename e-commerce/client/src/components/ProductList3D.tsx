@@ -55,50 +55,44 @@ const ProductList3D: React.FC<ProductList3DProps> = ({ products, className = "" 
         {products.map((product) => (
           <CardContainer key={product.id} className="inter-var">
             <CardBody className="bg-white relative group/card hover:shadow-2xl hover:shadow-emerald-500/[0.1] border border-gray-200 w-auto sm:w-[25rem] h-auto rounded-xl p-8">
-              {/* Imagen del producto */}
+              {/* Imagen del producto - más grande */}
               <CardItem
                 translateZ="50"
                 className="w-full mt-4"
               >
-                <div className="relative w-full h-64 overflow-hidden rounded-xl">
+                <div className="relative w-full h-80 overflow-hidden rounded-xl shadow-2xl group-hover:shadow-3xl transition-shadow duration-300" style={{
+                  boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 255, 255, 0.1)'
+                }}>
                   <Image
                     src={product.image}
                     alt={product.name}
                     fill
-                    className="object-cover group-hover/card:shadow-xl"
+                    className="object-cover group-hover/card:scale-105 transition-transform duration-300"
                   />
                 </div>
               </CardItem>
 
-              {/* Nombre del producto */}
+              {/* Nombre del producto - más abajo */}
               <CardItem
                 translateZ="40"
-                className="text-2xl font-bold text-neutral-800 mt-6"
+                className="text-2xl font-bold text-neutral-800 mt-8"
               >
                 {product.name}
               </CardItem>
 
-              {/* Descripción corta (si existe) */}
+              {/* Descripción corta - más abajo */}
               {product.shortDescription && (
                 <CardItem
                   as="p"
                   translateZ="30"
-                  className="text-neutral-500 text-base max-w-sm mt-3"
+                  className="text-neutral-500 text-base max-w-sm mt-4"
                 >
                   {product.shortDescription}
                 </CardItem>
               )}
 
-              {/* Precio */}
-              <CardItem
-                translateZ="40"
-                className="text-3xl font-bold text-neutral-900 mt-4"
-              >
-                ${product.price.toFixed(2)}
-              </CardItem>
-
-              {/* Botones de acción */}
-              <div className="flex justify-between items-center mt-8">
+              {/* Botones de acción - más abajo */}
+              <div className="flex justify-between items-center mt-10">
                 <CardItem
                   translateZ={20}
                   as={Link}
